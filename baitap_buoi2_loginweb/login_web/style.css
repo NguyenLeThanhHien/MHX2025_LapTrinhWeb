@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container h1 {
+  text-align: center;
+}
+.signin-container {
+  width: 50%;
+  padding: 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signin-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signin-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.signin-btn {
+  padding: 12px;
+  background-color: #007b4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #059669;
+}
+
+.or-text {
+  text-align: center;
+  margin: 20px 0 10px;
+  color: #444;
+}
+
+.social-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btns button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.social-btns button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-btns .fb {
+  background-color: #3b5998;
+}
+.social-btns .gg {
+  background-color: #db4437;
+}
+.social-btns .ln {
+  background-color: #0077b5;
+}
+.welcome-back {
+  width: 50%;
+  background: linear-gradient(to bottom right, #10b981, #059669);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-back h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.welcome-back p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.signup-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: white;
+  color: #059669;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+}
