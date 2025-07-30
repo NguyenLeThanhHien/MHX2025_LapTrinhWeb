@@ -1,70 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🌿 Final Project – Web Programming Class | Green Summer Campaign 2025
 
-## Available Scripts
+Welcome to the final project of the **Web Programming class** from the **Mùa Hè Xanh 2025 Campaign**! 🚀  
+This is **Expense Tracker**, a modern web app to help you manage your daily expenses with ease. 💸
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ✅ Add, Edit & Delete Expenses  
+- ✅ Store expenses locally using IndexedDB  
+- ✅ Interactive chart visualization of spending  
+- ✅ Calculate and display total expense summary  
+- ✅ Categorize by payment method, category & recipient  
+- ✅ Responsive layout for desktop and mobile  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧩 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ⚛️ ReactJS
+- 📦 IndexedDB (via idb)
+- 📊 Recharts
+- 🎨 CSS (custom styles)
+- 🧱 Modular React component architecture
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥️ Live Preview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> _(You can deploy this app using GitHub Pages, Vercel, or Netlify. Add your deployment link here if available.)_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone this repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone https://github.com/NguyenLeThanhHien/MHX2025_LapTrinhWeb.git
+cd MHX2025_LapTrinhWeb/baitap_FINAL/expense-tracker
+### 2. Install dependencies
+npm install
+### 3. Run the app
+npm start
+Visit http://localhost:3000 to open the app in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧠 How It Works
+When the app loads, it connects to the browser’s IndexedDB to retrieve previously stored expenses.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Each expense includes:
 
-## Learn More
+* Date of transaction
+* Payment method (e.g., Cash, Card)
+* Recipient / Payee
+* Description
+* Amount
+* Category
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All data is saved locally — no server needed.
+A dynamic bar chart visualizes spending.
+Edit or delete any transaction at any time.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Project Structure
+expense-tracker/
+├── components/
+│   ├── ExpenseForm.js        # Form to add new expenses
+│   ├── ExpenseList.js        # Displays list of expenses
+│   ├── TotalExpenses.js      # Shows total spending
+│   └── ExpenseChart.js       # Recharts-based chart component
+├── App.js                    # Root component
+├── App.css                   # Styling
+└── index.js                  # Entry point
 
-### Code Splitting
+🎨 Planned Improvements
+The current design is functional but simple. Here's a preview of the upcoming Dark Mode UI redesign:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Planned UI upgrades:
+🌘 Dark mode interface
+📱 Better spacing and mobile responsiveness
+✨ Animated transitions and effects
+💡 Tooltips & filtering by category
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🧑‍💻 Developed By
+👨‍💻 **Nguyễn Lê Thành Hiển**
+📚 Web Programming – UIT x Mùa Hè Xanh 2025
 
-### Making a Progressive Web App
+## 📜 License
+This project is open-source and intended for educational use only.
+Feel free to reuse with credit.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for checking out this project! 🌱
+Happy Coding! ✨
