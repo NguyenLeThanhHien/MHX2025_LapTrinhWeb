@@ -6,7 +6,7 @@ function TotalExpenses({ expenses }) {
 
   return (
     <div className="total">
-      Total to Date: ${total.toLocaleString()} VND
+      Total to Date: {total.toLocaleString()} VND
     </div>
   );
 }

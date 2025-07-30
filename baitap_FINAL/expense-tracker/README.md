@@ -71,14 +71,16 @@ Edit or delete any transaction at any time.
 ## 📂 Project Structure
 ```bash
 expense-tracker/
-├── components/
-│   ├── ExpenseForm.js        # Form to add new expenses
-│   ├── ExpenseList.js        # Displays list of expenses
-│   ├── TotalExpenses.js      # Shows total spending
-│   └── ExpenseChart.js       # Recharts-based chart component
-├── App.js                    # Root component
-├── App.css                   # Styling
-└── index.js                  # Entry point
+├──public
+├──src
+    ├── components/
+    │   ├── ExpenseForm.js        # Form to add new expenses
+    │   ├── ExpenseList.js        # Displays list of expenses
+    │   ├── TotalExpenses.js      # Shows total spending
+    │   └── ExpenseChart.js       # Recharts-based chart component
+    ├── App.js                    # Root component
+    ├── App.css                   # Styling
+    └── index.js                  # Entry point
 ```
 
 🎨 Planned Improvements
@@ -91,7 +93,8 @@ The current design is functional but simple. Here's a preview of the upcoming Da
 - ✨ Animated transitions and effects
 - 💡 Tooltips & filtering by category
 
-
+---
+## CREDIT:
 * 🧑‍💻 Developed By
 * 👨‍💻 **Nguyễn Lê Thành Hiển**
 * 📚 Web Programming – UIT x Mùa Hè Xanh 2025
