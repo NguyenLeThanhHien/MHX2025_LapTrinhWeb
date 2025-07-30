@@ -1,57 +1,80 @@
 import React, { useState } from 'react';
 
+// Form component for adding new expenses
 function ExpenseForm({ addExpense }) {
-  const [formData, setFormData] = useState({
-    date: '',
-    method: 'Cash',
-    paidTo: '',
-    description: '',
-    amount: '',
-    category: 'General',
-  });
+  const [name, setName] = useState('');
+  const [amount, setAmount] = useState('');
+  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [method, setMethod] = useState('Cash');
+  const [paidTo, setPaidTo] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.description || !formData.amount || !formData.paidTo) {
-      alert('Please fill in all fields');
-      return;
-    }
-    addExpense({
-      ...formData,
-      amount: parseFloat(formData.amount),
-    });
-    setFormData({
-      date: '',
-      method: 'Cash',
-      paidTo: '',
-      description: '',
-      amount: '',
-      category: 'General',
-    });
+    if (!name || !amount || !paidTo) return alert('Please fill in all fields');
+    const expense = {
+      id: Date.now(),
+      date,
+      method,
+      paidTo,
+      description: name,
+      amount: parseFloat(amount),
+    };
+    addExpense(expense);
+    setName('');
+    setAmount('');
+    setDate(new Date().toISOString().split('T')[0]);
+    setMethod('Cash');
+    setPaidTo('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} className="w-full" />
-        <select value={formData.method} onChange={(e) => setFormData({ ...formData, method: e.target.value })} className="w-full">
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Date</label>
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Method</label>
+        <select value={method} onChange={(e) => setMethod(e.target.value)}>
           <option value="Cash">Cash</option>
           <option value="Credit">Credit</option>
           <option value="Check">Check</option>
           <option value="Venmo">Venmo</option>
           <option value="PayPal">PayPal</option>
         </select>
-        <input type="text" value={formData.paidTo} onChange={(e) => setFormData({ ...formData, paidTo: e.target.value })} className="w-full" />
-        <input type="text" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} className="w-full" />
-        <input type="number" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} className="w-full" />
-        <select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })} className="w-full">
-          <option value="General">General</option>
-          <option value="Food">Food</option>
-          <option value="Travel">Travel</option>
-          <option value="Other">Other</option>
-        </select>
       </div>
-      <button type="submit" className="mt-4 w-full">Add Expense</button>
+      <div>
+        <label>Paid To</label>
+        <input
+          type="text"
+          value={paidTo}
+          onChange={(e) => setPaidTo(e.target.value)}
+          placeholder="e.g., Weller Corp"
+        />
+      </div>
+      <div>
+        <label>Description</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="e.g., August delivery"
+        />
+      </div>
+      <div>
+        <label>Amount (VND)</label>
+        <input
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          placeholder="e.g., 80000"
+        />
+      </div>
+      <button type="submit">Add Expense</button>
     </form>
   );
 }
