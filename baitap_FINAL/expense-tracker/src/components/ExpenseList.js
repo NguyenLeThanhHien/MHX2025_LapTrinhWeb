@@ -1,26 +1,22 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
 
-// Component to display list of expenses
 function ExpenseList({ expenses, deleteExpense, editExpense }) {
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h2 className="text-xl font-semibold mb-4">Expense List</h2>
+    <ul id="expenses-list" className="bg-white rounded shadow">
       {expenses.length === 0 ? (
-        <p className="text-gray-500">No expenses yet.</p>
+        <li className="p-2 text-center text-gray-500">No expenses yet.</li>
       ) : (
-        <ul>
-          {expenses.map((expense) => (
-            <ExpenseItem
-              key={expense.id}
-              expense={expense}
-              deleteExpense={deleteExpense}
-              editExpense={editExpense}
-            />
-          ))}
-        </ul>
+        expenses.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            expense={expense}
+            deleteExpense={deleteExpense}
+            editExpense={editExpense}
+          />
+        ))
       )}
-    </div>
+    </ul>
   );
 }
 
