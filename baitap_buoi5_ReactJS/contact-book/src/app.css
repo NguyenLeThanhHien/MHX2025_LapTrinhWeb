@@ -63,37 +63,97 @@ form input::placeholder {
 }
 
 .contact-card {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 8px;
-  width: 220px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease;
+  background: #232323;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #000a;
+  padding: 24px 24px 16px 24px;
+  margin: 16px 0;
+  min-width: 220px;
+  max-width: 260px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: box-shadow 0.3s, transform 0.2s;
+  position: relative;
 }
 
-.contact-card:hover {
-  transform: translateY(-2px);
+.contact-card.glowing {
+  box-shadow: 0 0 16px 2px #7f5fff, 0 4px 24px #000a;
+  animation: glow 2s infinite alternate;
 }
 
-.contact-card h3 {
-  margin-bottom: 8px;
+@keyframes glow {
+  from {
+    box-shadow: 0 0 16px 2px #7f5fff, 0 4px 24px #000a;
+  }
+  to {
+    box-shadow: 0 0 32px 8px #a685ff, 0 4px 24px #000a;
+  }
 }
 
-.contact-card p {
-  margin: 0;
-  color: #aaa;
+.contact-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.edit-button {
-  margin-top: 15px;
-  background-color: #444;
-  color: white;
-  padding: 8px 12px;
+.contact-city {
+  font-size: 1rem;
+  color: #bdbdbd;
+  margin-bottom: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  background: #333;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  padding: 6px 16px;
+  margin-top: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
 }
 
-.edit-button:hover {
-  background-color: #666;
+.edit-btn:hover,
+.save-btn:hover {
+  background: #7f5fff;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #ff4d4f;
+}
+
+.delete-btn:hover {
+  background: #ff7875;
+}
+
+.cancel-btn {
+  background: #555;
+}
+
+.cancel-btn:hover {
+  background: #888;
+}
+
+.edit-input {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #181818;
+  color: #fff;
+  width: 90%;
 }
